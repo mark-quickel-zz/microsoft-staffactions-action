@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "9697c94c-073d-4d1d-9b8a-c6cd7a69829f",
+		"name": "azure-actions-func",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://staffaction-actions-fn.azurewebsites.net/api/actions/A001",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7071/api/actions/A001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"actions",
+						"A001"
+					]
+				},
+				"description": "Gets a specific action based on ID"
+			},
+			"response": []
+		},
+		{
+			"name": "https://staffaction-actions-fn.azurewebsites.net/api/actions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"ID\": \"A007\",\r\n    \"Subject\": \"Subject 007\",\r\n    \"SupenseDate\": \"2022-01-03 11:18:00\",\r\n    \"PointOfContact\": {\r\n      \"ID\": 1005,\r\n      \"Name\": \"Timothy Mertz\",\r\n      \"Email\": \"timothymertz@microsoft.com\",\r\n      \"Phone\": \"8001111105\"\r\n    },\r\n    \"LeadAgency\": {\r\n      \"ID\": 44202,\r\n      \"Name\": \"Agency 002\"\r\n    },\r\n    \"Contributors\": [\r\n    ]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://staffaction-actions-fn.azurewebsites.net/api/actions",
+					"protocol": "https",
+					"host": [
+						"staffaction-actions-fn",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"actions"
+					]
+				},
+				"description": "Adds new Action based on JSON passed"
+			},
+			"response": []
+		}
+	]
+}
